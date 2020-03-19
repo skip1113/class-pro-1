@@ -1,11 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project One</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <title>Trails on Tap</title>
 </head>
+
 <body>
-    <h1>Hi</h1>
+  <div class= "container">
+    <div class="jumbotron">
+        <h1 class="display-4"><strong>Trails on tap</strong></h1>
+        <p class="lead"><Strong>Local Trials and brewery's within radius</Strong></p>
+    </div>
+    <div class="row">
+
+        <div class="col-md-12">
+          <form class="form-inline">
+          
+            <label class="sr-only" for="input-search">City</label>
+            <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text"><i class="fa fa-search">search</i></div>
+              </div>
+              <input type="text" class="form-control" id="input-search" placeholder="City">
+            </div>
+          
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          </form>
+            
+            <div class="card mb-4">
+                <div class="card-header">Results</div>
+                <div class="card-body">
+                  <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row no-gutters">
+                      <div class="col-md-4">
+                        <img src="..." class="card-img" alt="...">
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+            
+    
+</div>
+  <script src="assets/javaScript/javascript.js"></script>
 </body>
+
 </html>
