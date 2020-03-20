@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -16,56 +16,87 @@
 </head>
 
 <body>
-  <div class= "container">
+  <div class="container">
     <div class="jumbotron">
-        <h1 class="display-4"><strong>Trails on tap</strong></h1>
-        <p class="lead"><Strong>Local Trials and brewery's within radius</Strong></p>
+      <h1 class="display-4 text-right"><strong>Trails on Tap</strong></h1>
+      <p class="lead text-right"><Strong>Local Trials and brewery's within radius</Strong></p>
     </div>
     <div class="row">
 
-        <div class="col-md-12">
-          <form class="form-inline">
-          
-            <label class="sr-only" for="input-search">City</label>
-            <div class="input-group mb-2 mr-sm-2">
-              <div class="input-group-prepend">
-                <div class="input-group-text"><i class="fa fa-search">search</i></div>
-              </div>
-              <input type="text" class="form-control" id="input-search" placeholder="City">
+      <div class="col-md-12">
+        <form class="form-inline">
+
+          <label class="sr-only" for="input-search">City</label>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text"><i class="fa fa-search">search</i></div>
             </div>
-          
-            <button type="submit" id="add-search" class="btn btn-primary mb-2">Submit</button>
-          </form>
-            
-            <div class="card mb-4">
-                <div class="card-header">Results</div>
-                <div class="card-body">
-                  <div class="card mb-3" style="max-width: 540px;">
-                    <div class="row no-gutters">
-                      <div id="img-here" class="col-md-2">
-                        
-                      </div>
-                      <div class="col-md-8">
-                        <div class="card-body">
-                          <h4 id="trail-name" class="card-title">
-                          </h4>
-                          <h5 id="loc-here"></h5>
-                          <h5 id="rating-here">&#11088;</h5>
-                          <h6 id="diff-here"></h6>
-                          <p id="summary-trail" class="card-text"></p>
-                          <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                        </div>
-                      </div>
-                    </div>
+            <input type="text" class="form-control" id="input-search" placeholder="City">
+          </div>
+
+          <button type="submit" id="add-search" class="btn btn-primary mb-2">Submit</button>
+        </form>
+        <!-- trail display card -->
+        <div class="card mb-4">
+          <div class="card-header">Trails</div>
+          <div class="card-body">
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row no-gutters">
+                <div id="img-here" class="col-md-2">
+
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h4 id="trail-name" class="card-title">
+                    </h4>
+                    <h5 id="loc-here"></h5>
+                    <h5 id="rating-here">&#11088;</h5>
+                    <h6 id="diff-here"></h6>
+                    <p id="summary-trail" class="card-text"></p>
+                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
                   </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    
-            
-    
-</div>
+
+    <!-- brewery display card -->
+    <div class="card mb-4">
+      <div class="card-header">Brewery</div>
+      <div class="card-body">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div id="img-here" class="col-md-2">
+
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 id="brewery-name" class="card-title">
+                </h4>
+                <h5 id="street-here"></h5>
+                <h5 id="brewery-type">Brewery Type: </h5>
+
+                <h6 id="phone-here"></h6>
+                <p id="website-here" class="card-text"></p>
+                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+  </div>
   <script src="assets/javaScript/javascript.js"></script>
 </body>
+
 </html>
