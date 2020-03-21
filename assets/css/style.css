@@ -5,6 +5,14 @@ background-repeat: no-repeat;
 background-size: auto 100%;
 border-bottom:4px solid darkolivegreen;
 }
+#trail-result{
+    font-size: 20px;
+    font-weight: bold;
+}
+#brew-result{
+    font-size: 20px;
+    font-weight: bold;
+}
 
 h1 {
     color: darkolivegreen;
@@ -12,4 +20,14 @@ h1 {
 
 .lead {
     color: darkolivegreen;
+}
+#brewId{
+    /* padding: 10px;
+    margin: 10px; */
+    border: 2px darkolivegreen solid;
+    background-color: #e9ecef;
+}
+#gifId{
+    border: 2px darkolivegreen solid;
+    background-color: #e9ecef;
 }

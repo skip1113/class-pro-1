@@ -9,6 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <title>Trails on Tap</title>
@@ -29,34 +30,19 @@
           <label class="sr-only" for="input-search">City</label>
           <div class="input-group mb-2 mr-sm-2">
             <div class="input-group-prepend">
-              <div class="input-group-text"><i class="fa fa-search">search</i></div>
+              <!-- <div class="input-group-text"><i class="fa fa-search"></i></div> -->
             </div>
-            <input type="text" class="form-control" id="input-search" placeholder="City">
+            <input type="text" class="form-control" id="input-search" placeholder="City/Zip">
           </div>
 
-          <button type="submit" id="add-search" class="btn btn-primary mb-2">Submit</button>
+          <button type="submit" id="add-search" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
         </form>
         <!-- trail display card -->
         <div class="card mb-4">
-          <div class="card-header">Trails</div>
+          <div id="trail-result" class="card-header">Trails</div>
           <div class="card-body">
-            <div class="card mb-3" style="max-width: 540px;">
-              <div class="row no-gutters">
-                <div id="img-here" class="col-md-2">
+            <div id="img-here">
 
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body">
-                    <h4 id="trail-name" class="card-title">
-                    </h4>
-                    <h5 id="loc-here"></h5>
-                    <h5 id="rating-here">&#11088;</h5>
-                    <h6 id="diff-here"></h6>
-                    <p id="summary-trail" class="card-text"></p>
-                    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -65,26 +51,10 @@
 
     <!-- brewery display card -->
     <div class="card mb-4">
-      <div class="card-header">Brewery</div>
+      <div id="brew-result" class="card-header">Breweries</div>
       <div class="card-body">
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row no-gutters">
-            <div id="img-here" class="col-md-2">
+        <div id="brews-here">
 
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h4 id="brewery-name" class="card-title">
-                </h4>
-                <h5 id="street-here"></h5>
-                <h5 id="brewery-type">Brewery Type: </h5>
-
-                <h6 id="phone-here"></h6>
-                <p id="website-here" class="card-text"></p>
-                <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
