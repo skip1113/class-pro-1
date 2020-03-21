@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <title>Trails on Tap</title>
 
@@ -19,8 +21,8 @@
 <body>
   <div class="container">
     <div class="jumbotron">
-      <h1 class="display-4 text-right"><strong>Trails on Tap</strong></h1>
-      <p class="lead text-right"><Strong>Local Trials and brewery's within radius</Strong></p>
+      <h1 id="tracking-in-expand-fwd" class="display-4 text-right"><strong>Trails on Tap</strong></h1>
+      <p class="lead text-right"><Strong>Local Trials and brewery's within your city!</Strong></p>
     </div>
     <div class="row">
 
@@ -37,7 +39,12 @@
 
           <button type="submit" id="add-search" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
         </form>
-        <!-- trail display card -->
+        
+        
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6" style="margin-bottom: 160px;">
         <div class="card mb-4">
           <div id="trail-result" class="card-header">Trails</div>
           <div class="card-body">
@@ -47,25 +54,46 @@
           </div>
         </div>
       </div>
-    </div>
+      <!-- brewery display card -->
+      <div class="col-md-6" style="margin-bottom: 160px;">
+        <div class="card mb-4">
+          <div id="brew-result" class="card-header">Breweries</div>
+          <div class="card-body">
+            <div id="brews-here">
 
-    <!-- brewery display card -->
-    <div class="card mb-4">
-      <div id="brew-result" class="card-header">Breweries</div>
-      <div class="card-body">
-        <div id="brews-here">
-
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
   </div>
 
-
-
-
-
   </div>
+  <footer class="page-footer" style="background-color: darkolivegreen;">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Outdoor life, Outdoor brews, what more can you ask for.</h5>
+          <p class="grey-text text-lighten-4">Our first big API project. Creating this website/app to help save some time planning hikes.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">This Project</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">About</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Share Your Trails</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Terms of Use</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2020 Copyright Text
+      </div>
+    </div>
+  </footer>
   <script src="assets/javaScript/javascript.js"></script>
 </body>
 
