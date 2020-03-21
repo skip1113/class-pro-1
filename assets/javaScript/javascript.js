@@ -1,9 +1,9 @@
-// function displayTrail() {
-// //ajax call for hiking API
+function displayTrails() {
+//ajax call for hiking API
 
 var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200704227-63dce10d4323d2ac2f6a6cb59477a59e";
 
-var location = $(this).attr("data-name");
+// var location = $(this).attr("data-name");
 $.ajax({
     url: queryURL,
     method: "GET"
@@ -13,7 +13,7 @@ $.ajax({
     console.log(response.trails[0].name);
     var trailResults = response.trails;
     var trailLink = trailResults.url; 
-    for (var i = 0; i < trailResults.length; i++) {
+    for (var i = 0; i < 5; i++) {
         // console.log(response.trails[0].name);
         var trailImg = $("<img>").addClass("trail");
         var gifDiv = $("<div id='gifId'>")
@@ -37,17 +37,19 @@ $.ajax({
 
     }
 });
-
-function displayBrewery() {
-    //ajax call for Beer API
-    var queryURL = "https://api.openbrewerydb.org/breweries?by_city=colorado_springs";
+}
+// var brewSearch = [];
+function displayBrewery(citySearch) {
+    console.log("call made ");
+    // var cityInput = $(this).attr("data-name");
+    var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + citySearch + "&breweries?per_page=10";
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (result) {
         console.log(result);
         console.log(result[1].name);
-        for (var j = 0; j < result.length; j++) {
+        for (var j = 0; j < 5; j++) {
             var brewDiv = $("<div id='brewId'>")
             var breweryName = $("<p>").text(result[j].name);
             var street = $("<p>").text(result[j].street);
@@ -65,10 +67,11 @@ function displayBrewery() {
 };
 
 
-$("#add-search").click(function () {
-        alert("Handler for .click() called.");
+$("#add-search").on("click", function (event) {
+    event.preventDefault();
+        console.log("you've clicked: ")
         var citySearch = $("#input-search").val().trim();
-        console.log("city" + citySearch)   
-        displayBrewery();
-        // displayTrails();
+        console.log("city " + citySearch)   
+        displayBrewery(citySearch);
+        displayTrails();
     });
