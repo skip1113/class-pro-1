@@ -12,7 +12,7 @@ $.ajax({
     console.log(response);
     console.log(response.trails[0].name);
     var trailResults = response.trails;
-    var trailLink = trailResults.url; 
+    var trailLink = trailResults.url;
     for (var i = 0; i < trailResults.length; i++) {
         // console.log(response.trails[0].name);
         var trailImg = $("<img>").addClass("trail");
