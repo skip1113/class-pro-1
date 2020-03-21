@@ -61,7 +61,8 @@ $.ajax({
         //$("#img-here").prepend(trailImg);
         var breweryName = $("<p>").text(result[j].name);
         // $("#brewery-name").append(breweryName);
-
+        var brewImg = $("<img src='https://tse2.mm.bing.net/th?id=OIP.DSzirQ5z6t7iSmeaso2sjgHaD4&pid=Api&P=0&w=352&h=186'>").addClass("brewImage");
+        // brewImg
         var street = $("<p>").text(result[j].street);
         // $("#street-here").append(street);
 
@@ -73,6 +74,7 @@ $.ajax({
 
         var website_url = $("<p>").text(result[j].website_url);
         // $("#website-here").append(website_url);
+        brewDiv.append(brewImg);
         brewDiv.append(breweryName);
         brewDiv.append(street);
         brewDiv.append(brewery_type);

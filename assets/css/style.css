@@ -31,3 +31,7 @@ h1 {
     border: 2px darkolivegreen solid;
     background-color: #e9ecef;
 }
+.brewImage{
+    height: 100px;
+    width: 150px;
+}
