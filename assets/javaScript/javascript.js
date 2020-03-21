@@ -11,23 +11,31 @@ $.ajax({
     // var results = response.data;
     console.log(response);
     console.log(response.trails[0].name);
-    // for (var i = 0; i < response.length; i++) {
-    // console.log(response.trails[0].name);
-    var trailImg = $("<img>").addClass("trail");
-    var gifDiv = $("<div id='gifId'>")
-    trailImg.attr("src", response.trails[0].imgSqSmall);
-    // gifDiv.append(trailImg);
-    $("#img-here").prepend(trailImg);
-    var trailName = $("<p>").text(response.trails[0].name);
-    $("#trail-name").append(trailName);
-    var location = $("<p>").text(response.trails[0].location);
-    $("#loc-here").append(location);
-    var rating = $("<p>").text(response.trails[0].stars);
-    $("#rating-here").append(rating);
-    var summary = $("<p>").text(response.trails[0].summary);
-    $("#summary-trail").append(summary);
+    var trailResults = response.trails;
+    var trailLink = trailResults.url; 
+    for (var i = 0; i < trailResults.length; i++) {
+        // console.log(response.trails[0].name);
+        var trailImg = $("<img>").addClass("trail");
+        var gifDiv = $("<div id='gifId'>")
+        trailImg.attr("src", response.trails[i].imgSqSmall);
+        // var trailLink = trailResults.url; 
+        console.log(trailLink);
+        var trailName = $("<p>").text(response.trails[i].name);
+        $("#trail-name").append(trailName);
+        var location = $("<p>").text(response.trails[i].location);
+        $("#loc-here").append(location);
+        var rating = $("<p>").text(response.trails[i].stars + "\u2B50");
+        $("#rating-here").append(rating);
+        var summary = $("<p>").text(response.trails[i].summary);
+        $("#summary-trail").append(summary);
+        gifDiv.append(trailImg);
+        gifDiv.append(trailName);
+        gifDiv.append(location);
+        gifDiv.append(rating);
+        gifDiv.append(summary);
+        $("#img-here").prepend(gifDiv);
 
-    // }
+    }
 });
 // }
 // $("#add-search").on("click", function() {
@@ -44,26 +52,33 @@ $.ajax({
 }).then(function (result) {
     console.log(result);
     console.log(result[1].name);
-    // for (var i = 0; i < response.length; i++) {
-    // console.log(response.trails[0].name);
-    //var trailImg = $("<img>").addClass("trail");
-    //var gifDiv = $("<div id='gifId'>")
-    //trailImg.attr("src", response.trails[0].imgSqSmall);
-    // gifDiv.append(trailImg);
-    //$("#img-here").prepend(trailImg);
-    var breweryName = $("<p>").text(result[1].name);
-    $("#brewery-name").append(breweryName);
+    for (var j = 0; j < result.length; j++) {
+        // console.log(response.trails[0].name);
+        //var trailImg = $("<img>").addClass("trail");
+        var brewDiv = $("<div id='brewId'>")
+        //trailImg.attr("src", response.trails[0].imgSqSmall);
+        // gifDiv.append(trailImg);
+        //$("#img-here").prepend(trailImg);
+        var breweryName = $("<p>").text(result[j].name);
+        // $("#brewery-name").append(breweryName);
 
-    var street = $("<p>").text(result[1].street);
-    $("#street-here").append(street);
+        var street = $("<p>").text(result[j].street);
+        // $("#street-here").append(street);
 
-    var brewery_type = $("<p>").text(result[1].brewery_type);
-    $("#brewery-type").append(brewery_type);
+        var brewery_type = $("<p>").text(result[j].brewery_type);
+        // $("#brewery-type").append(brewery_type);
 
-    var phone = $("<p>").text(result[1].phone);
-    $("#phone-here").append(phone);
+        var phone = $("<p>").text(result[j].phone);
+        // $("#phone-here").append(phone);
 
-    var website_url = $("<p>").text(result[1].website_url);
-    $("#website-here").append(website_url);
+        var website_url = $("<p>").text(result[j].website_url);
+        // $("#website-here").append(website_url);
+        brewDiv.append(breweryName);
+        brewDiv.append(street);
+        brewDiv.append(brewery_type);
+        brewDiv.append(phone);
+        brewDiv.append(website_url);
+        $("#brews-here").prepend(brewDiv);
+    }
 
 });
