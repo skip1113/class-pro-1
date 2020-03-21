@@ -1,7 +1,7 @@
-function displayTrails() {
+function displayTrails(lat, long) {
 //ajax call for hiking API
-
-var queryURL = "https://www.hikingproject.com/data/get-trails?lat=40.0274&lon=-105.2519&maxDistance=10&key=200704227-63dce10d4323d2ac2f6a6cb59477a59e";
+// $("img-here").empty();
+var queryURL = "https://www.hikingproject.com/data/get-trails?" + lat + "&" + long + "&maxDistance=10&key=200704227-63dce10d4323d2ac2f6a6cb59477a59e";
 
 // var location = $(this).attr("data-name");
 $.ajax({
@@ -41,6 +41,7 @@ $.ajax({
 // var brewSearch = [];
 function displayBrewery(citySearch) {
     console.log("call made ");
+    
     // var cityInput = $(this).attr("data-name");
     var queryURL = "https://api.openbrewerydb.org/breweries?by_city=" + citySearch + "&breweries?per_page=10";
     $.ajax({
@@ -56,6 +57,8 @@ function displayBrewery(citySearch) {
             var brewery_type = $("<p>").text(result[j].brewery_type);
             var phone = $("<p>").text(result[j].phone);
             var website_url = $("<p>").text(result[j].website_url);
+            brewImage = $("<img src='https://files.slack.com/files-pri/TS9EUV9K4-F01045AQKGA/image.png'>").addClass("brewImage");
+            brewDiv.append(brewImage);
             brewDiv.append(breweryName);
             brewDiv.append(street);
             brewDiv.append(brewery_type);
@@ -66,12 +69,27 @@ function displayBrewery(citySearch) {
     });
 };
 
-
+function convert(citySearch) {
+    var mapboxURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + citySearch + ".json?country=us&access_token=pk.eyJ1Ijoic2tpcDExMTMiLCJhIjoiY2s4MjR3Y3p3MHdybTNlcmwxdGlia2Q3MCJ9.LueUgl63OO8XUk6Jh3r46Q"
+    $.ajax({
+        url: mapboxURL,
+        method: "GET"
+    }).then(function (calling) {
+        console.log(calling);
+        console.log(calling.features[0].center);
+        var lat = calling.features[0].center[1];
+        var long = calling.features[0].center[0];
+        console.log(lat);
+        console.log(long);
+        displayTrails("lat=" + lat, "lon=" + long);
+    })
+}
 $("#add-search").on("click", function (event) {
     event.preventDefault();
         console.log("you've clicked: ")
         var citySearch = $("#input-search").val().trim();
         console.log("city " + citySearch)   
         displayBrewery(citySearch);
-        displayTrails();
+        convert(citySearch);
+        // displayTrails(lat, long);
     });
