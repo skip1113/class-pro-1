@@ -1,6 +1,6 @@
 # class-pro-1
 
-Thirsty Trails
+Trails on Tap
 
 participants:
 Kamy Leeret
@@ -9,23 +9,31 @@ Tammy Richardson
 
 APIs we intend to use:
 1.) Hiker Project Data API: https://www.hikingproject.com/data
-2.) Beer mapping API: https://www.programmableweb.com/api/beer-mapping
+2.) Brewerie API: https://www.openbrewerydb.org/
+3.) Geocoding API: https://opencagedata.com/api
 
-![](assets/images/Picture1.png)
+![](assets\images\trailsscreenshot.JPG)
 
 Our Vision
-We want to create an app that will allow the user to search for local hiking trails and breweries/restraunts to visit after the hike. 
+As developers we want to create an app that will allow the user to search for local hiking trails and breweries near by. 
 
 features:
-search trails
-condition data
-campsites
-weather
-directions
+Trails:
+search by city
+name
+location
 difficulty level
-breweries 
-(pull city name into api to provide breweries near the trail 
-with in a designated radius)
+ratings
+summary
+
+
+Breweries:
+search by city
+name
+address
+type
+phone number
+website
 
 
 USER STORIES:
@@ -46,36 +54,9 @@ USER STORIES:
     f) Show maps or provide directions
     g) As a user I want to be able to plan my hiking adventures with one app -- with ease!
 
-5) As a user I want to be able to:
 
-Tasks:
 
-    1) Develop HTML
 
-        A)  Create Index.html
-            -[]Create app layout
-            -[]jumbotron 
-            -[]card to display information
-            -[]card to display images
-            -[]card to display map
-            -[]button for trail
-            -[]button for brewery
-            -[]
-  
-        A)  Search function:
-            -[] Create a text box 
-            -[] Create a search button
-            -[] Define what the list will have in it
-            -[] Create a place to display the list
 
-    2) Setup API's:
-        -[] Create js file
-        -[] Create API to pull hiking trail information by City.
-        -[] Create API to pull breweary directions by City.
-        
-    3) Obtain Data:
-        -[] Obtain longitude latitude coordinants and marry them together.
-        -[] Create a data respository with xref to link hiking trails to.
-
-    4)
+       
 
