@@ -12,7 +12,7 @@ APIs we intend to use:
 2.) Brewerie API: https://www.openbrewerydb.org/
 3.) Geocoding API: https://opencagedata.com/api
 
-![](assets\images\trailsscreenshot.JPG)
+![](https://github.com/skip1113/class-pro-1/blob/master/assets/images/trailsscreenshot.JPG)
 
 Our Vision
 As developers we want to create an app that will allow the user to search for local hiking trails and breweries near by. 
