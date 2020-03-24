@@ -14,15 +14,15 @@ function displayTrails(lat, long) {
             var gifDiv = $("<div id='gifId'>")
             trailImg.attr("src", response.trails[i].imgSqSmall);
             var trailName = $("<p>").text(response.trails[i].name);
-            $("#trail-name").append(trailName);
+            $("#trail-name").html(trailName);
             var location = $("<p>").text(response.trails[i].location);
-            $("#loc-here").append(location);
+            $("#loc-here").html(location);
             var difficulty = $("<p>").text("Difficulty level: " + response.trails[i].difficulty);
-            $("#difficulty-here").append(difficulty);
+            $("#difficulty-here").html(difficulty);
             var rating = $("<p>").text(response.trails[i].stars + "\u2B50");
-            $("#rating-here").append(rating);
+            $("#rating-here").html(rating);
             var summary = $("<p>").text(response.trails[i].summary);
-            $("#summary-trail").append(summary);
+            $("#summary-trail").html(summary);
             gifDiv.append(trailImg);
             gifDiv.append(trailName);
             gifDiv.append(location);
@@ -73,6 +73,8 @@ function convert(citySearch) {
 }
 $("#add-search").on("click", function (event) {
     event.preventDefault();
+    $("#img-here").empty();
+    $("#brews-here").empty();
     var citySearch = $("#input-search").val().trim();
     displayBrewery(citySearch);
     convert(citySearch);
