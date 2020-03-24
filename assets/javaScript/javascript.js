@@ -6,23 +6,18 @@ function displayTrails(lat, long) {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        var trailResults = response.trails;
-        var trailLink = trailResults.url;
+        
         for (var i = 0; i < 5; i++) {
 
             var trailImg = $("<img>").addClass("trail");
             var gifDiv = $("<div id='gifId'>")
             trailImg.attr("src", response.trails[i].imgSqSmall);
             var trailName = $("<p>").text(response.trails[i].name);
-            $("#trail-name").html(trailName);
             var location = $("<p>").text(response.trails[i].location);
-            $("#loc-here").html(location);
             var difficulty = $("<p>").text("Difficulty level: " + response.trails[i].difficulty);
-            $("#difficulty-here").html(difficulty);
             var rating = $("<p>").text(response.trails[i].stars + "\u2B50");
-            $("#rating-here").html(rating);
             var summary = $("<p>").text(response.trails[i].summary);
-            $("#summary-trail").html(summary);
+
             gifDiv.append(trailImg);
             gifDiv.append(trailName);
             gifDiv.append(location);
@@ -47,7 +42,8 @@ function displayBrewery(citySearch) {
             var street = $("<p>").text(result[j].street);
             var brewery_type = $("<p>").text("Type: " + result[j].brewery_type);
             var phone = $("<p>").text(result[j].phone);
-            var website_url = $("<p>").text(result[j].website_url);
+            var website_url = $("<a>").text(result[j].website_url);
+            website_url.attr("href", result[j].website_url);
             brewImage = $("<img src=https://www.gannett-cdn.com/-mm-/b2b05a4ab25f4fca0316459e1c7404c537a89702/c=0-0-1365-768/local/-/media/2018/10/09/USATODAY/usatsports/247WallSt.com-247WS-497973-beer-cover-photo-1.jpg?width=660&height=372&fit=crop&format=pjpg&auto=webp>").addClass("brewImage");
             brewDiv.append(brewImage);
             brewDiv.append(breweryName);
