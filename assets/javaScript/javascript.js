@@ -12,14 +12,17 @@ function displayTrails(lat, long) {
             var trailImg = $("<img>").addClass("trail");
             var gifDiv = $("<div id='gifId'>")
             trailImg.attr("src", response.trails[i].imgSqSmall);
-            var trailName = $("<p>").text(response.trails[i].name);
+            var trailNameP = $("<p>");
+            var trailName = $("<a>").text(response.trails[i].name);
+            trailNameP.append(trailName);
             var location = $("<p>").text(response.trails[i].location);
             var difficulty = $("<p>").text("Difficulty level: " + response.trails[i].difficulty);
             var rating = $("<p>").text(response.trails[i].stars + "\u2B50");
             var summary = $("<p>").text(response.trails[i].summary);
-
+            trailName.attr("href", response.trails[i].url);
+            console.log(response.trails[i].url);
             gifDiv.append(trailImg);
-            gifDiv.append(trailName);
+            gifDiv.append(trailNameP);
             gifDiv.append(location);
             gifDiv.append(difficulty);
             gifDiv.append(rating);
