@@ -2,7 +2,7 @@
 # Live link to this app: https://skip1113.github.io/class-pro-1/
 Trails on Tap
 
-participants:
+Participants:
 Kamy Leeret
 Skip Khamvongsa
 Tammy Richardson
@@ -54,9 +54,13 @@ USER STORIES:
     f) Show maps or provide directions
     g) As a user I want to be able to plan my hiking adventures with one app -- with ease!
 
+TECHNOLOGIES USED:
+* JavaScript
+* AJAX
+* API's
+    * Openbrewerydb
+    * HikingProject
+    * Mapbox
 
-
-
-
-       
-
+Overcoming Problems:
+It made it difficult to use the hiking api to be able to search for a city since it would only let you search my longitude and latitude. We needed to find a way to convert a city to long and lat to be able to search from the hiking api. Our solution was to find a geography api that does that and implement it into our code to make this app user friendly.
