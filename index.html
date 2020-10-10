@@ -19,88 +19,107 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light">
-    <a class="navbar-brand" href="#top"><strong>Trails on Tap</strong></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link" href="#">Sign Up <span class="sr-only">(current)</span></a>
-        <a class="nav-link" href="#">Log In</a>
-      </div>
+  <nav class="navbar" role="nagvigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-brand" href="#top"><strong>Trails on Tap</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
     </div>
+
+    <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> -->
+    <div class="navbar-menu">
+      <div class="navbar-start"></div>
+      <div class="navbar-end">
+        <ul class="nav justify-content-end" style="flex-wrap: nowrap;">
+          <li class="nav-item">
+            <a href="#" id="sign-up">SIGN UP</a>
+          </li>
+          <br>
+          <li class="nav-item">
+            <a href="#" id="log-in">LOG IN</a>
+          </li>
+      </div>
+      <!-- <a class="nav-link" href="#">Sign Up <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Log In</a> -->
+    </div>
+    <!-- </div> -->
   </nav>
 
-  <div class="row">
-    <div class="col-md-12">
-      <form class="form-inline">
+  <section class="page-section search-bar">
+    <div class="col-md-12" id="search-col">
+      <form class="form">
 
-        <label class="sr-only" for="input-search">City</label>
+        <label class="sr-only" for="input-search">City or Address</label>
         <div class="input-group mb-2 mr-sm-2">
           <div class="input-group-prepend">
 
           </div>
-          <input type="text" class="form-control" id="input-search" placeholder="City">
+          <input type="text" class="form-control" id="input-search" placeholder="City or Address">
+          <span><button type="submit" id="add-search" class="btn btn-primary mb-2"><i
+                class="fa fa-search"></i></button></span>
         </div>
 
-        <button type="submit" id="add-search" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
+
       </form>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-md-6" style="margin-bottom: 160px;">
-      <div class="card mb-4">
-        <div id="trail-result" class="card-header">Trails</div>
-        <div class="card-body">
-          <div id="img-here">
+    </div>
+    <section class="section-page">
+      <div class="section-page results" id="trail-result">
+        <!-- <div class="col-md-6"> -->
+          <div class="card">
+            <div id="trail-result" class="card-header">Trails</div>
+            <div class="card-body">
+              <div id="img-here">
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        <!-- </div> -->
 
-    <!-- brewery display card -->
-    <div class="col-md-6" style="margin-bottom: 160px;">
-      <div class="card mb-4">
-        <div id="brew-result" class="card-header">Breweries</div>
-        <div class="card-body">
-          <div id="brews-here">
+        <!-- brewery display card -->
+        <!-- <div class="col-md-6" id="brew-result"> -->
+          <div class="card" id="brew-result">
+            <div id="brew-result" class="card-header">Breweries</div>
+            <div class="card-body">
+              <div id="brews-here">
 
+              </div>
+            </div>
           </div>
-        </div>
+        <!-- </div> -->
       </div>
-    </div>
-  </div>
-  <!-- </div> -->
+    </section>
 
-  </div>
-  <footer class="page-footer" style="background-color: darkolivegreen;">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Outdoor life, Outdoor brews, what more can you ask for.</h5>
-          <p class="grey-text text-lighten-4">Our first big API project. Creating this website/app to help save some
-            time planning hikes.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">This Project</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="README.md">About</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Share Your Trails</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Terms of Use</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </div>
+    <!-- </div> -->
+
     </div>
-    <div class="footer-copyright">
+    <footer class="page-footer" style="background-color: darkolivegreen;">
       <div class="container">
-        © 2020 Copyright Text
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Outdoor life, Outdoor brews, what more can you ask for.</h5>
+            <p class="grey-text text-lighten-4">Our first big API project. Creating this website/app to help save some
+              time planning hikes.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">This Project</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="README.md">About</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Share Your Trails</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Terms of Use</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </footer>
-  <script src="assets/javaScript/javascript.js"></script>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 Copyright Text
+        </div>
+      </div>
+    </footer>
+    <script src="assets/javaScript/javascript.js"></script>
 </body>
 
 </html>
