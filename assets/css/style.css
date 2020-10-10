@@ -6,16 +6,20 @@ body {
 main {
   flex: 1 0 auto;
 }
-/* nav {
-    background-color: transparent;
-} */
+
 nav {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
 }
-.navbar-nav {
-    text-align: right;
+.navbar-brand {
+    color: darkolivegreen
 }
-.jumbotron {
+.navbar .navbar-menu .nav a{
+    margin: 10px;
+    font-size: 15px;
+    color: darkolivegreen;
+    text-decoration: none;
+}
+#search-col {
 /* background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg); */
 background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
 height:400px;
@@ -24,19 +28,26 @@ background-size: cover;
 background-position: 50% 50%;
 border-bottom:4px solid darkolivegreen;
 }
-.text-left {
-    margin-top: -0.7em;
-    /* background-color:  */
+/* .input-group {
+    margin-left: 30%;
+} */
+.form-control {
+    margin-top: 10%;
+    margin-left: 30%;
+    max-width: 30%;
+    align-items: center;
+    align-content: center;
+    text-align: center;
 }
-#jumbo-item {
-    float: right;
-    margin-right: 2em;
-    margin-top: -1em;
+span{
+    margin-top: 10%;
 }
 #trail-result{
     font-size: 20px;
     font-weight: bold;
+    text-align: center;
 }
+
 /* #tracking-in-expand-fwd {
 	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -77,4 +88,8 @@ h1 {
 }
 .page-footer{
     background-color: darkolivegreen;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    width: 100%;
 }
