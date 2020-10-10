@@ -8,11 +8,22 @@ body {
     flex: 1 0 auto;
   }
 .jumbotron {
-background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg);
-height:300px;
+/* background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg); */
+background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
+height:400px;
 background-repeat: no-repeat;
-background-size: auto 100%;
+background-size: cover;
+background-position: 50% 50%;
 border-bottom:4px solid darkolivegreen;
+}
+.text-left {
+    margin-top: -0.7em;
+    /* background-color:  */
+}
+#jumbo-item {
+    float: right;
+    margin-right: 2em;
+    margin-top: -1em;
 }
 #trail-result{
     font-size: 20px;
