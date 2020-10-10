@@ -12,62 +12,66 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js'></script>
   <link href='https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
   <title>Trails on Tap</title>
 
 </head>
 
 <body>
-  <!-- <div class="container"> -->
-    <div class="jumbotron">
-      <a class="text-right" id="jumbo-item">Sign Up</a>
-      <a class="text-right" id="jumbo-item">Log In</a>
-      <h1 id="tracking-in-expand-fwd" class="text-left"><strong>Trails on Tap</strong></h1>
-      <!-- <p class="lead text-left"><Strong>Local Trails and breweries within your city!</Strong></p> -->
-      
-    </div>
-    <div class="row">
 
-      <div class="col-md-12">
-        <form class="form-inline">
-
-          <label class="sr-only" for="input-search">City</label>
-          <div class="input-group mb-2 mr-sm-2">
-            <div class="input-group-prepend">
-
-            </div>
-            <input type="text" class="form-control" id="input-search" placeholder="City">
-          </div>
-
-          <button type="submit" id="add-search" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
-        </form>
-
-
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="#top"><strong>Trails on Tap</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="#">Sign Up <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#">Log In</a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-6" style="margin-bottom: 160px;">
-        <div class="card mb-4">
-          <div id="trail-result" class="card-header">Trails</div>
-          <div class="card-body">
-            <div id="img-here">
+  </nav>
 
-            </div>
+  <div class="row">
+    <div class="col-md-12">
+      <form class="form-inline">
+
+        <label class="sr-only" for="input-search">City</label>
+        <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+
           </div>
+          <input type="text" class="form-control" id="input-search" placeholder="City">
         </div>
-      </div>
-      <!-- brewery display card -->
-      <div class="col-md-6" style="margin-bottom: 160px;">
-        <div class="card mb-4">
-          <div id="brew-result" class="card-header">Breweries</div>
-          <div class="card-body">
-            <div id="brews-here">
 
-            </div>
+        <button type="submit" id="add-search" class="btn btn-primary mb-2"><i class="fa fa-search"></i></button>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6" style="margin-bottom: 160px;">
+      <div class="card mb-4">
+        <div id="trail-result" class="card-header">Trails</div>
+        <div class="card-body">
+          <div id="img-here">
           </div>
         </div>
       </div>
     </div>
+
+    <!-- brewery display card -->
+    <div class="col-md-6" style="margin-bottom: 160px;">
+      <div class="card mb-4">
+        <div id="brew-result" class="card-header">Breweries</div>
+        <div class="card-body">
+          <div id="brews-here">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- </div> -->
 
   </div>
