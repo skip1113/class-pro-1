@@ -2,30 +2,37 @@ body {
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
+height:400px;
+background-repeat: no-repeat;
+background-size: cover;
+background-position: 50% 50%;
 }
 main {
   flex: 1 0 auto;
 }
 
 nav {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .navbar-brand {
-    color: darkolivegreen
+    /* color: darkolivegreen; */
+    color: olivedrab;
 }
 .navbar .navbar-menu .nav a{
-    margin: 10px;
+    margin-right: 28px;
     font-size: 15px;
-    color: darkolivegreen;
+    /* color: darkolivegreen; */
+    color: olivedrab;
     text-decoration: none;
 }
 #search-col {
 /* background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg); */
-background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
+/* background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
 height:400px;
 background-repeat: no-repeat;
 background-size: cover;
-background-position: 50% 50%;
+background-position: 50% 50%; */
 border-bottom:4px solid darkolivegreen;
 }
 /* .input-group {
@@ -46,6 +53,7 @@ span{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
+    margin-bottom: 15px;
 }
 
 /* #tracking-in-expand-fwd {
@@ -63,6 +71,7 @@ span{
 #brew-result{
     font-size: 20px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 h1 {
@@ -90,6 +99,8 @@ h1 {
     background-color: darkolivegreen;
     bottom: 0;
     position: fixed;
+    /* margin-top: 2em; */
+    padding-top: 2em;
     left: 0;
     width: 100%;
     color: white;
@@ -100,4 +111,7 @@ ul.footer {
 footer .footer-items a{
     color: white;
     text-decoration: none;
+}
+footer .footer-items a:hover {
+    font-weight: bolder;
 }
