@@ -92,4 +92,12 @@ h1 {
     position: fixed;
     left: 0;
     width: 100%;
+    color: white;
+}
+ul.footer {
+    list-style-type: none;
+}
+footer .footer-items a{
+    color: white;
+    text-decoration: none;
 }
