@@ -70,6 +70,10 @@ function convert(citySearch) {
         displayTrails("lat=" + lat, "lon=" + long);
     })
 }
+hideEmpty();
+function hideEmpty() {
+    $(".full-results").hide();
+}
 $("#add-search").on("click", function (event) {
     event.preventDefault();
     $("#img-here").empty();
