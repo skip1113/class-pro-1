@@ -35,7 +35,7 @@ background-size: cover;
 background-position: 50% 50%; */
 padding-top: 10%;
 padding-bottom: 6%;
-border-bottom:4px solid darkolivegreen;
+/* border-bottom:4px solid darkolivegreen; */
 }
 #input-search {
     display: block;
@@ -109,9 +109,10 @@ h1 {
 .page-footer{
     background-color: darkolivegreen;
     bottom: 0;
-    /* position: fixed; */
+    position: fixed;
     /* margin-top: 2em; */
-    padding-top: 2em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
     left: 0;
     width: 100%;
     color: white;
