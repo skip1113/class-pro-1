@@ -78,6 +78,7 @@ $("#add-search").on("click", function (event) {
     event.preventDefault();
     $("#img-here").empty();
     $("#brews-here").empty();
+    $(".full-results").show();
     var citySearch = $("#input-search").val().trim();
     displayBrewery(citySearch);
     convert(citySearch);
