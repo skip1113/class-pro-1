@@ -11,7 +11,6 @@ background-position: 50% 50%;
 main {
   flex: 1 0 auto;
 }
-
 nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -26,36 +25,35 @@ nav .navbar-brand a:hover {
 .navbar .navbar-menu .nav a{
     margin-right: 28px;
     font-size: 15px;
-    /* color: darkolivegreen; */
     color: olivedrab;
     text-decoration: none;
 }
 .navbar .navbar-menu .nav a:hover {
-    /* font-size: 18px; */
     font-weight: bolder;
+}
+.form-title {
+    text-align: center;
+    color: white;
+    font-size: 55px;
+}
+.form-subtitle {
+    text-align: center;
+    color: white;
+    font-size: 18px;
 }
 #search-col {
 /* background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg); */
-/* background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");
-height:400px;
-background-repeat: no-repeat;
-background-size: cover;
-background-position: 50% 50%; */
+/* background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");*/
 padding-top: 10%;
 padding-bottom: 6%;
-/* border-bottom:4px solid darkolivegreen; */
 }
 #input-search {
     display: block;
     margin: 0 auto;
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-    width: 40%;
+    width: 30%;
 }
 .form-control {
     margin-top: 10%;
-    /* margin-left: 30%; */
-    /* max-width: 30%; */
     align-items: center;
     align-content: center;
     text-align: center;
@@ -66,7 +64,9 @@ span{
 #add-search {
     display: block;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 15px;
+    background-color: olivedrab;
+    border: none;
 }
 #trail-result{
     font-size: 20px;
@@ -93,16 +93,10 @@ span{
     margin-bottom: 4%;
 }
 
-h1 {
-    color: darkolivegreen;
-}
-
 .lead {
     color: darkolivegreen;
 }
 #brewId{
-    /* padding: 10px;
-    margin: 10px; */
     border: 2px darkolivegreen solid;
     background-color: #e9ecef;
 }
@@ -118,7 +112,6 @@ h1 {
     background-color: darkolivegreen;
     bottom: 0;
     position: fixed;
-    /* margin-top: 2em; */
     padding-top: 1em;
     padding-bottom: 0.5em;
     left: 0;
