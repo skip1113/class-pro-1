@@ -16,7 +16,11 @@ nav {
     background-color: rgba(0, 0, 0, 0.5);
 }
 .navbar-brand {
-    /* color: darkolivegreen; */
+    text-decoration: none;
+    color: olivedrab;
+}
+nav .navbar-brand a:hover {
+    font-weight: bolder;
     color: olivedrab;
 }
 .navbar .navbar-menu .nav a{
@@ -25,6 +29,10 @@ nav {
     /* color: darkolivegreen; */
     color: olivedrab;
     text-decoration: none;
+}
+.navbar .navbar-menu .nav a:hover {
+    /* font-size: 18px; */
+    font-weight: bolder;
 }
 #search-col {
 /* background-image: url(https://www.tnvacation.com/sites/default/files/styles/hero/public/article/_HEADER_PC_jmgriese.jpg); */
