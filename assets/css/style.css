@@ -16,16 +16,16 @@ nav {
 }
 .navbar-brand {
     text-decoration: none;
-    color: olivedrab;
+    color: rgb(123, 167, 35);
 }
 nav .navbar-brand a:hover {
     font-weight: bolder;
-    color: olivedrab;
+    color: rgb(132, 180, 36);
 }
 .navbar .navbar-menu .nav a{
     margin-right: 28px;
     font-size: 15px;
-    color: olivedrab;
+    color: rgb(148, 201, 41);
     text-decoration: none;
 }
 .navbar .navbar-menu .nav a:hover {
@@ -46,6 +46,7 @@ nav .navbar-brand a:hover {
 /* background-image: url("https://cdn.hswstatic.com/gif/flat-beer-orig-1.jpg");*/
 padding-top: 10%;
 padding-bottom: 6%;
+height: 80vh;
 }
 #input-search {
     display: block;
@@ -68,13 +69,17 @@ span{
     background-color: olivedrab;
     border: none;
 }
+section.full-results {
+    background-color: whitesmoke;
+}
 #trail-result{
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 4%;
 }
-
+.card {
+    margin-top: 2%;
+}
 /* #tracking-in-expand-fwd {
 	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -90,7 +95,6 @@ span{
 #brew-result{
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 4%;
 }
 
 .lead {
@@ -99,10 +103,12 @@ span{
 #brewId{
     border: 2px darkolivegreen solid;
     background-color: #e9ecef;
+    margin-bottom: 12px;
 }
 #gifId{
     border: 2px darkolivegreen solid;
     background-color: #e9ecef;
+    margin-bottom: 12px;
 }
 .brewImage{
     height: 100px;
@@ -111,9 +117,9 @@ span{
 .page-footer{
     background-color: darkolivegreen;
     bottom: 0;
-    position: fixed;
+    /* position: fixed; */
     padding-top: 1em;
-    padding-bottom: 0.5em;
+    /* padding-bottom: 0.5em; */
     left: 0;
     width: 100%;
     color: white;
