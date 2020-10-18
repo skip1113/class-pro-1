@@ -1,5 +1,5 @@
 # class-pro-1
-# Live link to this app: https://skip1113.github.io/class-pro-1/
+# Live link to this app: https://skip1113.github.io/class-pro-1/views/index.html
 # Trails on Tap
 
 ## Participants:
@@ -12,7 +12,7 @@ APIs we intend to use:
 2.) Brewerie API: https://www.openbrewerydb.org/
 3.) Geocoding API: https://opencagedata.com/api
 
-![](/assets/images/trailsscreenshot.JPG)
+![](/assets/images/homepage.png)
 
 Our Vision
 As developers we want to create an app that will allow the user to search for local hiking trails and breweries withhin a radius of where the user searches for. Our intentions for creating this was to have a simplified experience for a user and to search for their two favorite activites to create a plan.
